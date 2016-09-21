@@ -6,7 +6,19 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 var routes = require('./config/routes');
+var Raven = require('raven-js');
 
+var sentryKey = 'e04670df50d54a328c711c6a440a5f84'
+var sentryApp = '100591'
+var sentryURL = 'https://' + sentryKey + '@sentry.io/' + sentryApp
+
+
+var _APP_INFO = {
+ name: 'Github Battle',
+ branch: '4',
+ version: '1.0'
+}
+Raven.config(sentryURL, {release: _APP_INFO.version}).install()
 
 // var Link = React.createClass({
 //   changeURL: function () {
