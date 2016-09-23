@@ -5,7 +5,7 @@ var transparentBg = require('../styles').transparentBg;
 var Link = ReactRouter.Link;
 var UserDetails = require('./UserDetails');
 var UserDetailsWrapper = require('./UserDetailsWrapper');
-
+var styles = require('../styles');
 
 //functional stateless components
 function ConfirmBattle (props) {
